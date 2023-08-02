@@ -1,1 +1,102 @@
-Hello World!
+<!DOCTYPE html> <!-- HTML5を使う宣言 -->
+<html lang="ja">
+<!-- html全体を囲むタグ。絶対必要。閉じタグも必要。 -->
+<head>
+    <!-- headタグ内に記述した内容は、画面には表示されない。SEOや、画面の特徴を記載する（使ってる文字コードなど）。HTMLファイルには絶対必要。閉じタグも必要。 -->
+    <meta charset="UTF-8"> <!-- ブラウザが文字化けしないようにするためにUTF-8にエンコードしますよ、という宣言 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- スマホでもきれいに見せられるようにするおまじない -->
+    <title>titleタグ</title> <!-- ブラウザで表示した際、タブに書かれるタイトル。 -->
+</head>
+<body>
+    <!-- 画面に表示される部分。ここにコンテンツ部分のタグを書く。絶対必要。閉じタグも必要。 -->
+    <!-- コメント ここに書いたことはブラウザに表示されません。開発者がチームのみんなに向けたメモを書くためのものです。 -->
+
+    <!-- orderd list（連番） -->
+    <ol>
+        <li>ordered list 1</li>
+        <li>ordered list 2</li>
+        <li>ordered list 3</li>
+    </ol>
+
+    <!-- unorderd list（箇条書き） -->
+    <ul>
+        <li>unordered list 1</li>
+        <li>unordered list 2</li>
+        <li>unordered list 3</li>
+    </ul>
+
+    <!-- definition list（用語の定義と用語の説明） -->
+    <dl>
+        <dt>h1タグ</dt> <!-- definition term（用語を定義） -->
+        <dd>heading（見出し）の一番大きいサイズ</dd> <!-- definition description（用語の説明） -->
+        <dt>h2タグ</dt>
+        <dd>heading（見出し）の二番目に大きいサイズ</dd>
+    </dl>
+
+    <table border="1"> <!-- tableタグ。テーブルの枠を作ります。 -->
+        <thead> <!-- table headタグ。表のヘッダーを表します。 -->
+            <tr> <!-- table row。表の各1行を表します。 -->
+                <th>1</th> <!-- table headerタグ。表の各1行の列を表します。 -->
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+            </tr>
+        </thead>
+        <tbody> <!-- table bodyタグ。表のボディを表します。 -->
+            <tr>
+                <td>データ1</td> <!-- table dataタグ。ボディの行を表します。 -->
+                <td>データ2</td>
+                <td>データ3</td>
+                <td>データ4</td>
+                <td>データ5</td>
+            </tr>
+            <tr>
+                <td>データ1</td>
+                <td>データ2</td>
+                <td>データ3</td>
+                <td>データ4</td>
+                <td>データ5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form method="" action="">
+        <!--
+            formタグ。PHPと組み合わせて、お問い合わせ内容をDBと呼ばれる格納庫に保存したり、お問い合わせしてくれたユーザーにお礼のメールを送ったりするときに使います。Twitterなどのログインにも使われています。
+        -->
+        <!-- method = 送る方法（GETとPOSTの2種類あると今は覚えておく） -->
+        <!-- action = 宛先（URLだったりファイル名だったり） -->
+
+        <!--
+            inputタグはインライン要素。これまで記述してきたタグはブロック要素。
+            インライン要素 : 一定の長さしか持たない。直後に書いたタグがインライン要素の場合は横並びになる。
+            ブロック要素 : 画面横幅いっぱいの長さを持つ。つまり改行して表示されているように段落ちする。
+        -->
+        <!--
+            inputタグのtypeには、入力するタイプを書きます。
+                text = ただの文字列
+                email = メールアドレス
+                password = パスワード
+                hidden = 画面には表示されない隠しデータ
+                などなど
+                http://www.htmq.com/html5/input.shtml
+        -->
+        氏名 : <input type="text" name="user_name" value="">
+
+        <!-- typeがsubmitの場合、押したらformが送信されます。 -->
+        <button type="submit">送信</button>
+    </form>
+
+    <!-- divisionタグ（ひとかたまりを作るときに使います。（めっちゃ使います）） -->
+    <div class="">ブロック要素</div>
+
+    <!-- anchorタグ（錨を下ろしてその町へアクセスするイメージ）hyper reference属性（参照するURL） -->
+    <!-- インライン要素（一定の長さしか持たない） -->
+    <a href="https://stack-act.co.jp" target="_blank">スタックアクトHPへ</a>
+
+    <!-- imageタグ（画像を表示させるタグ。source属性（参照するパス）alternative属性（ネットが重くて画像が表示されなかった場合などに、本来どんな画像がここに表示されているかを表します。）） -->
+    <!-- インライン要素（インライン要素を連続で記述すると横並びになる） -->
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2h8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="海の画像" width="200" height="100">
+</body>
+</html>
